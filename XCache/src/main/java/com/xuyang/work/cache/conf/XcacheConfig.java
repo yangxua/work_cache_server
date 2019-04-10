@@ -67,8 +67,7 @@ public class XcacheConfig {
                 property.setExcludeEnvList(Arrays.asList(StringUtils.split(env.getProperty(XcacheProperty.XCACHE_LOCK_EXCLUDE_ENV), ",")));
             }
         } catch (Exception e) {
-
-            //log.warn("xcache config error", e);
+            log.warn("xcache config error", e);
         }
 
         return property;
