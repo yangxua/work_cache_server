@@ -145,7 +145,7 @@ public class XcacheHelper {
         return conf;
     }
 
-    private static String getMethodName(Method method) {
+    public static String getMethodName(Method method) {
         if(method == null) {
             return StringUtil.EMPTY;
         }

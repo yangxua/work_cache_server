@@ -1,11 +1,7 @@
-/*
 package com.xuyang.work.cache.invoker;
 
-import com.fenqile.redis.JedisProxy;
-import com.fenqile.work.common.xcache.exception.XcacheSerializeException;
 import com.google.common.collect.ImmutableMap;
 import com.xuyang.work.cache.SerializeType;
-import com.xuyang.work.cache.XcacheHelper;
 import com.xuyang.work.cache.XcacheInstance;
 import com.xuyang.work.cache.XcacheModelConf;
 import com.xuyang.work.cache.conf.XcacheConf;
@@ -16,11 +12,9 @@ import com.xuyang.work.cache.serializer.ProtoStuffSerializer;
 
 import java.util.Map;
 
-*/
 /**
  * redis 缓存执行器
- *//*
-
+ */
 public class RedisInvoker extends AbstractXcacheInvoker {
 
     private static JsonSerializer jsonSerializer = new JsonSerializer();
@@ -37,6 +31,21 @@ public class RedisInvoker extends AbstractXcacheInvoker {
     }
 
     @Override
+    protected <T> XcacheInstance<T> doGet(boolean master, XcacheConf conf, XcacheModelConf modelConf, String key) throws Exception {
+        return null;
+    }
+
+    @Override
+    public <T> void set(XcacheConf conf, XcacheModelConf modelConf, String key, XcacheInstance<T> cache) throws Exception {
+
+    }
+
+    @Override
+    public void clear(XcacheConf conf, XcacheModelConf modelConf, String key) {
+
+    }
+
+    /*@Override
     public <T> XcacheInstance<T> doGet(boolean master, XcacheConf conf, XcacheModelConf modelConf, String key) throws Exception {
         JedisProxy slave = master ? JedisProxy.getMasterCache(XcacheHelper.getRedisKey()) : JedisProxy.getSlaveCache(XcacheHelper.getRedisKey());
         String value = slave.get(key);
@@ -80,5 +89,5 @@ public class RedisInvoker extends AbstractXcacheInvoker {
     @Override
     public void clear(XcacheConf conf, XcacheModelConf modelConf, String key) throws Exception {
         JedisProxy.getMasterCache(XcacheHelper.getRedisKey()).del(key);
-    }
-}*/
+    }*/
+}
