@@ -1,6 +1,7 @@
 package com.xuyang.work.cache.aspect;
 
 import com.xuyang.work.cache.XcacheInstance;
+import com.xuyang.work.cache.XcacheManager;
 import com.xuyang.work.cache.XcacheProperty;
 import com.xuyang.work.cache.exception.XcacheLoadException;
 import lombok.extern.slf4j.Slf4j;
