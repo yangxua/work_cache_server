@@ -20,7 +20,7 @@ public @interface Xcache {
     /**
      * 缓存类型
      */
-    XcacheType type() default XcacheType.REDIS;
+    XcacheType type() default XcacheType.LOCAL;
 
     /**
      * 序列化类型

@@ -22,7 +22,7 @@ public class XcacheProperty {
     public static final String XCACHE_LOCK_DEFAULT_TIMEOUT_PROPERTY = "xcache.lock.default.timeout";
     public static final String XCACHE_LOCK_EXCLUDE_ENV = "xcache.lock.enclude.env";
 
-    private static final boolean DEFAULT_XCACHE_SWITCH = false;
+    private static final boolean DEFAULT_XCACHE_SWITCH = true;
     private static final int DEFAULT_XCACHE_SECONDS = 300;
     private static final int DEFAULT_XCACHE_ALARM_SECONDS = 180;
     private static final int DEFAULT_LOCK_TIMEOUT_MILLISSECONDS = 50;

@@ -34,7 +34,7 @@ public class XcacheServiceAspect {
     public Object doServiceAspect(ProceedingJoinPoint pjp) throws Throwable {
         try {
             if (!property.isXcacheSwitch()) {
-                pjp.proceed();
+                return pjp.proceed();
             }
 
             XcacheInstance cache = XcacheManager.get(pjp);
