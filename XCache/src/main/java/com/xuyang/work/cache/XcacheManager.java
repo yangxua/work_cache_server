@@ -25,7 +25,7 @@ public class XcacheManager {
 
         XcacheConf conf = XcacheHelper.getCacheConf(pjp);
         if (null == conf) {
-            throw new IllegalStateException(String.format("can not find XcacheConf annotation on method{%s}", null != conf ? XcacheHelper.getMethodName(conf.getMethod()) : null));
+            throw new IllegalStateException(String.format("can not find XcacheConf annotation on method{%s}", XcacheHelper.getMethodName(conf.getMethod())));
         }
 
         XcacheInvoker invoker = type2Invoker.get(conf.getXcacheType());
