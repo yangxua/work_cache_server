@@ -1,3 +1,4 @@
 rootProject.name = 'work_cache_server'
 include 'XCache'
+include 'Cache'
 
